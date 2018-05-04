@@ -1,17 +1,27 @@
 import React from 'react';
-import "./pictures.css";
+import './pictures.css';
 
-class Pictures extends React.Component{
-  render() {
-    return(
-      <div className="Pictures content-wrapper">
-        <div className="Pictures-row">
-          <div className="Picture">picture 1</div>
-          <div className="Picture">picture 2</div>
-          <div className="Picture">picture 3</div>
-        </div>
-      </div>
-    )
-  }
-}
+
+
+class Pictures extends React.Component {
+    renderPictures() {
+      return this.props.json.map(picture=> {
+        console.log('>',picture)
+        return <div className="picture">{picture.label}</div>
+
+      })
+    }
+    
+    render() {
+      return(
+            <div className="pictures content-wrapper">
+              {this.renderPictures()}
+            </div>
+          )
+    }
+      
+    
+ }
+
+
 export default Pictures;

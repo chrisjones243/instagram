@@ -1,16 +1,14 @@
-.Pictures {
+.pictures {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.Picture {
+.picture {
+  flex: 0 0 293px;
   margin-right: 20px;
   margin-bottom: 20px;
   width: 293px;
   height: 293px;
   background-color: mistyrose;
-}
-
-.Pictures-row{
-  display: flex;
-  align-items: stretch;
 }
