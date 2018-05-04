@@ -6,9 +6,13 @@ import './pictures.css';
 class Pictures extends React.Component {
     renderPictures() {
       return this.props.json.map(picture=> {
-        console.log('>',picture)
-        return <div className="picture">{picture.label}</div>
-
+        return (
+          <div key={picture.node.id} className="picture">
+            <a href={picture.node.display_url}>
+              <img src={picture.node.thumbnail_src} width="100%" />
+            </a>
+          </div>
+        )
       })
     }
     
@@ -16,12 +20,10 @@ class Pictures extends React.Component {
       return(
             <div className="pictures content-wrapper">
               {this.renderPictures()}
-            </div>
+            </div>
           )
-    }
-      
-    
- }
+        }
+      }
 
 
 export default Pictures;

@@ -2,12 +2,12 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .picture {
   flex: 0 0 293px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 10px;
   width: 293px;
   height: 293px;
   background-color: mistyrose;

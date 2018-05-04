@@ -22,6 +22,23 @@ const data = [
     ]
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      picturesData: []
+    }
+  }
+
+  componentDidMount(){
+    console.log('>hey component did mount');
+    fetch('https://api.myjson.com/bins/ckqm2')
+    .then(res =>res.json())
+    .then(json =>{
+      console.log(json);
+      this.setState({picturesData: json.data.user.edge_owner_to_timeline_media.edges })
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -31,7 +48,7 @@ class App extends Component {
         <div className="main" >
 
           <ProfileHeader />
-          <Pictures json={data}/>
+          <Pictures json={this.state.picturesData}/>
 
         </div>
 
