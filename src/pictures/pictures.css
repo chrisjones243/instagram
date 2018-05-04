@@ -1,0 +1,16 @@
+.Pictures {
+  padding: 0;
+}
+
+.Picture {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 293px;
+  height: 293px;
+  background-color: mistyrose;
+}
+
+.Pictures-row{
+  display: flex;
+  align-items: stretch;
+}
